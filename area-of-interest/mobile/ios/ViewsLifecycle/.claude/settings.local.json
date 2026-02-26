@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__xcodebuildmcp__build_run_sim",
+      "mcp__xcodebuildmcp__session-set-defaults",
+      "mcp__xcodebuildmcp__session-clear-defaults",
+      "mcp__xcodebuildmcp__stop_app_sim",
+      "mcp__xcodebuildmcp__launch_app_sim",
+      "mcp__xcodebuildmcp__describe_ui",
+      "mcp__xcodebuildmcp__tap",
+      "mcp__xcodebuildmcp__swipe",
+      "mcp__xcodebuildmcp__start_sim_log_cap",
+      "mcp__xcodebuildmcp__stop_sim_log_cap",
+      "mcp__xcodebuildmcp__launch_app_logs_sim"
+    ]
+  }
+}
