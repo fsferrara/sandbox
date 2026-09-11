@@ -42,7 +42,9 @@ let project = Project(
             ),
             sources: ["TuistTuistTuttoMondo/**/*.swift"],
             resources: ["TuistTuistTuttoMondo/Assets.xcassets"],
-            dependencies: [],
+            dependencies: [
+                .target(name: "GreetingKit"),
+            ],
             settings: .settings(
                 base: [
                     "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
@@ -82,6 +84,28 @@ let project = Project(
                 .target(name: "TuistTuistTuttoMondo"),
             ]
         ),
+        .target(
+            name: "GreetingKit",
+            destinations: .iOS,
+            product: .framework,
+            bundleId: "com.fsferrara.GreetingKit",
+            deploymentTargets: .iOS("26.2"),
+            infoPlist: .default,
+            sources: ["Modules/GreetingKit/Sources/**/*.swift"],
+            dependencies: []
+        ),
+        .target(
+            name: "GreetingKitTests",
+            destinations: .iOS,
+            product: .unitTests,
+            bundleId: "com.fsferrara.GreetingKitTests",
+            deploymentTargets: .iOS("26.2"),
+            infoPlist: .default,
+            sources: ["Modules/GreetingKit/Tests/**/*.swift"],
+            dependencies: [
+                .target(name: "GreetingKit"),
+            ]
+        ),
     ],
     schemes: [
         .scheme(
@@ -94,6 +118,7 @@ let project = Project(
                 [
                     "TuistTuistTuttoMondoTests",
                     "TuistTuistTuttoMondoUITests",
+                    "GreetingKitTests",
                 ]
             ),
             runAction: .runAction(
