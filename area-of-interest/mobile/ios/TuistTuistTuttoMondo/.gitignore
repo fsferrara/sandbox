@@ -1,6 +1,12 @@
+### Tuist Configuration ###
+/*.xcodeproj
+/*.xcworkspace
+/Derived
+
+### ########################################
+
 /.build
 /Packages
-/*.xcodeproj
 xcuserdata/
 DerivedData/
 .swiftpm/config/registries.json
